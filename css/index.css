@@ -1,0 +1,222 @@
+/* common styles */
+@font-face {
+    font-family: "IBM";
+    src: url(../fonts/IBMwoff/IBMPlexMono-ExtraLight.woff) format("woff"),
+      url(../fonts/IMBttf/IBMPlexMono-ExtraLight.ttf) format("ttf");
+    font-weight: 200;
+}
+  
+  @font-face {
+    font-family: "IBM";
+    src: url(../fonts/IBMwoff/IBMPlexMono-Light.woff) format("woff"),
+      url(../fonts/IMBttf/IBMPlexMono-Light.ttf) format("ttf");
+    font-weight: 300;
+}
+  
+  @font-face {
+    font-family: "IBM";
+    src: url(../fonts/IBMwoff/IBMPlexMono-Regular.woff) format("woff"),
+      url(../fonts/IMBttf/IBMPlexMono-Regular.ttf) format("ttf");
+    font-weight: 400;
+}
+  
+  @font-face {
+    font-family: "IBM";
+    src: url(../fonts/IBMwoff/IBMPlexMono-Medium.woff) format("woff"),
+      url(../fonts/IMBttf/IBMPlexMono-Medium.ttf) format("ttf");
+    font-weight: 500;
+}
+  
+  @font-face {
+    font-family: "IBM";
+    src: url(../fonts/IBMwoff/IBMPlexMono-SemiBold.woff) format("woff"),
+      url(../fonts/IMBttf/IBMPlexMono-SemiBold.ttf) format("ttf");
+    font-weight: 600;
+}
+
+:root {
+    --title-color: rgb(255, 255, 255);
+    --page-color: rgba(240, 240, 240, 1);
+    --page-input-color: rgb(216, 216, 216);
+    --bot-bubble-color: rgb(208, 208, 208);
+    --border-color: rgba(173, 173, 173, 1);
+    --user-bubble-color: rgb(214, 189, 233);
+    --elements-color: rgb(214, 189, 233);
+}
+
+.center-container {
+    width: 60rem;
+    margin: 5rem auto;
+}
+
+/* common styles end */
+
+html {
+    font-family: "IBM", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1vw;
+    line-height: 1vw;
+}
+
+/* body styles */
+
+.header {
+    display: flex;
+	height: 2rem;
+	background: linear-gradient(90deg, rgba(255, 255, 255, 0), rebeccapurple 50%,  rgba(255, 255, 255, 0));
+    margin-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: var(--title-color);
+}
+
+.chat-outer {
+    border-radius: 2rem;
+    overflow: hidden; 
+    background-color: var(--page-color);
+}
+
+.chat {
+    margin: 1rem 0rem;
+    overflow-y: scroll; 
+    height: 30rem;
+}
+
+.chat__messages {
+    border-radius: 2rem;
+}
+
+.bot {
+    display: flex;
+    align-items: end;
+}
+
+.bot__icon {
+    margin: 1rem 0rem 1rem 1rem;
+}
+
+.bot__messages {
+    margin: 1rem 0;
+}
+
+.bot__messages_bubble {
+    display: flex;
+    align-items: center;
+    height: auto;
+    width: max-content;
+    margin-left: 1rem;
+    margin-top: 0.2rem;
+    border-radius: 1.5rem;
+    background-color: var(--bot-bubble-color);
+}
+
+.bot__text{
+    margin: 1rem;
+}
+  
+.user {
+    flex: 1;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: end;
+}
+
+.user__icon {
+    margin: 1rem 1rem 1rem 0rem;
+}
+
+.user__messages {
+    margin: 1rem 0;
+    text-align:center;
+}
+
+.user__messages_bubble {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    height: auto;
+    width: max-content;
+    margin-right: 1rem;
+    margin-top: 0.2rem;
+    border-radius: 1.5rem;
+    background-color: var(--user-bubble-color);
+}
+
+.user__text{
+    margin: 1rem;
+}
+
+.userpic {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 100%;
+}
+
+.input-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--page-input-color);
+}
+
+.input-field__input {
+    appearance: none;
+    border: none;
+    outline: none;
+    border-bottom: 0.2rem solid var(--page-color);
+    background: rgba(var(--page-color), 0.8);
+    border-radius: 0.2rem 0.2rem 0 0;
+    padding: 0.4rem;
+    margin-left: 2rem;
+    width: 100%;
+    font-family: "IBM", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1vw;
+    line-height: 1vw;
+}
+
+.input-field__button {
+    appearance: none;
+    border: none;
+    background-color: inherit;
+    padding: 0.2rem 1rem;
+}
+
+.button__icon {
+    margin-top: 1rem;
+    height: 4rem;
+    width: 4rem;
+    transition: 0.2s;
+    filter: opacity(0.5);
+    cursor: pointer;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    top: 10rem;  
+    left: 10rem;
+    z-index: 10;
+    background-color: var(--white-color);
+    color: black;
+    opacity: 0.7;
+}
+
+
+.tooltip__user {
+    left: 82rem;
+    transition: 0.4s;
+}
+/* body styles end */
+
+/* animation styles */
+
+.button__icon:hover {
+    scale: 1.08;
+    filter: opacity(0.8);
+}
+
+/* animation styles end */
